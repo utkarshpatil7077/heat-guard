@@ -9,9 +9,7 @@ function Layout() {
 
   return (
     <div className="min-h-screen bg-[#f8f9fa] flex">
-      {/* Sidebar handles navigation selection */}
-      <Sidebar activeTab={activeTab} onTabSelect={setActiveTab} />
-
+      
       {/* Main Content Area with left margin to clear the collapsed sidebar */}
       <div className="flex-1 ml-20 transition-all duration-300 flex flex-col">
         
@@ -29,6 +27,8 @@ function Layout() {
           {activeTab === 'settings' && <div>Settings Component</div>}
         </main>
       </div>
+      {/* Sidebar handles navigation selection */}
+      <Sidebar activeTab={activeTab} onTabSelect={setActiveTab} />
     </div>
   );
 }
